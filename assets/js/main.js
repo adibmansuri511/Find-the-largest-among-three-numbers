@@ -1,26 +1,48 @@
-function swap() {
+function largestNumber() {
 
-    // Take input from the user
-    let a = parseInt(document.getElementById("valueOne").value);
-    let b = parseInt(document.getElementById("valueTwo").value);
+    // Take number01 from the input
+    const num01 = Number(document.getElementById("number01").value);
 
-    // Before the Variable 1 & Variable 2 swap
-    console.log(`Before Swap: Variable 1 = ${a}, Variable 2 = ${b}`);
+    // Take number02 from the input
+    const num02 = Number(document.getElementById("number02").value);
 
-    document.querySelector("#p1").innerHTML = `Before Swap: Variable 1 = ${a}, Variable 2 = ${b}`;
+    // Take number03 from the input
+    const num03 = Number(document.getElementById("number03").value);
 
-    // Create a temporary variable
-    let temp;
+    
+    // Check the three input numbers which is the largest one.
 
-    // Swap variables
-    temp = a;
-    a = b;
-    b = temp;
+    let result = "";
 
+    // Check if num01 is largest
+    if (num01 > num02 && num01 > num03) {
 
-    // After the Variable 1 & Variable 2 swap
-    console.log(`After Swap: Variable 1 = ${a}, Variable 2 = ${b}`);
+        result = `The largest number is : ${num01}`;
+        console.log(result);
+        document.querySelector('#h4').innerHTML = result;
 
-    document.querySelector("#p2").innerHTML = `After Swap: Variable 1 = ${a}, Variable 2 = ${b}`;
+    }
+    // Check if num02 is largest
+    else if (num02 > num01 && num02 > num03) {
+
+        result = `The largest number is : ${num02}`;
+        console.log(result);
+        document.querySelector('#h4').innerHTML = result;
+
+    }
+    // Check if num03 is largest
+    else if (num03 > num01 && num03 > num02) {
+
+        result = `The largest number is : ${num03}`;
+        console.log(result);
+        document.querySelector('#h4').innerHTML = result;
+
+    } else {
+
+        result = `All numbers are equal.`;
+        console.log(result);
+        document.querySelector('#h4').innerHTML = result;
+
+    }
 
 }
