@@ -1,2 +1,2 @@
-# find-the-largest-among-three-numbers
- Practice Example
+# Find-the-largest-among-three-numbers
+JavaScript Practice Example.
